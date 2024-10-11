@@ -215,28 +215,28 @@ document.getElementById('logout-btn').addEventListener('click', logout);
 
 
 
-// restart quiz function
-// Function to restart the quiz
-function restartQuiz() {
-    // Reset any necessary variables (like score, question index, etc.)
-    currentQuestionIndex = 0;  // Reset to the first question
-    score = 0;  // Reset the score
-    totalQuestions = 10;  // Reset total questions if applicable
+// // restart quiz function
+// // Function to restart the quiz
+// function restartQuiz() {
+//     // Reset any necessary variables (like score, question index, etc.)
+//     currentQuestionIndex = 0;  // Reset to the first question
+//     score = 0;  // Reset the score
+//     totalQuestions = 10;  // Reset total questions if applicable
 
-    // Clear previous quiz feedback
-    document.getElementById('quiz-feedback').style.display = 'none';
-    document.getElementById('quiz-feedback').textContent = '';
+//     // Clear previous quiz feedback
+//     document.getElementById('quiz-feedback').style.display = 'none';
+//     document.getElementById('quiz-feedback').textContent = '';
 
-    // Hide the logout and restart buttons initially
-    document.getElementById('logout-btn').style.display = 'none';
-    document.getElementById('restart-btn').style.display = 'none';
+//     // Hide the logout and restart buttons initially
+//     document.getElementById('logout-btn').style.display = 'none';
+//     document.getElementById('restart-btn').style.display = 'none';
 
-    // Load the quiz questions again
-    loadQuizQuestions();  // Assume this is your function to fetch and display questions
-}
+//     // Load the quiz questions again
+//     loadQuizQuestions();  // Assume this is your function to fetch and display questions
+// }
 
-// Attach the restart function to the button
-document.getElementById('restart-btn').addEventListener('click', restartQuiz);
+// // Attach the restart function to the button
+// document.getElementById('restart-btn').addEventListener('click', restartQuiz);
 
 
 
