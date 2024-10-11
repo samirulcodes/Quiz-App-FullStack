@@ -151,43 +151,6 @@ async function endQuiz() {
 }
 
 
-// // Function to save quiz result to the server
-// async function saveQuizResult(score) {
-//     const token = localStorage.getItem('token');  // Retrieve the user's auth token
-
-//     if (!token) {
-//         alert('User not logged in. Cannot save the result.');
-//         return;
-//     }
-
-//     try {
-//         console.log('Saving quiz result with score:', score);
-
-//         const response = await fetch('http://localhost:5000/api/quiz/save', {
-//             method: 'POST',
-//             headers: {
-//                 'Content-Type': 'application/json',
-//                 'Authorization': `Bearer ${token}`  // Send token for authentication
-//             },
-//             body: JSON.stringify({ score, totalQuestions: 10 })  // Send score and total questions
-//         });
-
-//         const data = await response.json();
-
-//         if (response.status === 201) {
-//             console.log('Quiz result saved successfully on the server:', data.message);
-
-//             // Display feedback based on server response
-//             const feedbackDiv = document.getElementById('quiz-feedback');
-//             feedbackDiv.textContent = data.feedback;
-//             feedbackDiv.style.display = 'block';  // Show the feedback div
-//         } else {
-//             console.error('Error saving quiz result:', data.message);
-//         }
-//     } catch (error) {
-//         console.error('Network error while saving quiz result:', error);
-//     }
-// }
 
 
 
