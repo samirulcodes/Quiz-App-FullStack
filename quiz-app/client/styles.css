@@ -1,0 +1,155 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Main Container */
+#app {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+}
+
+/* Header Styles */
+h1 {
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Auth Container Styles */
+#auth {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Button Styles */
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 5px 0; /* Space between buttons */
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Quiz Container Styles */
+#quiz-container {
+    margin-top: 20px;
+}
+
+/* Quiz Timer and Question Number */
+#timer, 
+#question-number {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Question Styles */
+#question {
+    font-size: 22px;
+    font-weight: bold;
+    color: #000; /* Darker color for better contrast */
+    margin-bottom: 15px;
+}
+
+/* Options Styles */
+#options {
+    display: flex;
+    flex-direction: column; /* Stack options in a single column */
+}
+
+label {
+    background-color: #e9ecef; /* Light background for options */
+    border-radius: 4px;
+    padding: 10px;
+    text-align: left; /* Align text to the left */
+    transition: background-color 0.3s;
+    margin-bottom: 15px; /* Increased space between options */
+}
+
+label:hover {
+    background-color: #d3d3d3; /* Darker background on hover */
+}
+
+/* Result Styles */
+#result {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Logout Button Styles */
+#logout-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    display: none; /* Initially hidden */
+}
+
+#logout-btn:hover {
+    background-color: #c82333;
+}
+
+/* Quiz Feedback Styles */
+#quiz-feedback {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+    display: none; /* Initially hidden */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 600px) {
+    #app {
+        padding: 15px;
+    }
+
+    button, #logout-btn {
+        padding: 8px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        padding: 8px;
+    }
+
+    #timer, 
+    #question-number {
+        font-size: 18px;
+    }
+}

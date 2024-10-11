@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Quiz App</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Quiz App</h1>
+        <div id="auth">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button id="registerBtn">Register</button>
+            <button id="loginBtn">Login</button>
+        </div>
+
+        <!-- Show after login -->
+    <div id="quiz-container" style="display: none;">
+        <button id="startQuizBtn">Start Quiz</button>
+        <div id="quiz" style="display:none;">
+            <div id="timer"></div>
+            <div id="question-number"></div> <!-- New element for displaying question number -->
+            <div id="question"></div>
+            <div id="options"></div>
+            <button id="nextBtn" style="display:none;">Next</button>
+        </div>
+        <div id="result" style="display:none;"></div>
+    </div>
+
+    <!-- <div id="quiz-feedback" style="display: none; font-size: 18px; font-weight: bold;"></div> -->
+
+    <button id="logout-btn" style="display: none;">Logout</button>
+    <div id="quiz-feedback" style="display: none; font-size: 18px; font-weight: bold; color: #333;"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
