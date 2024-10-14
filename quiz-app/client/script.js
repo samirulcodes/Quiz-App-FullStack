@@ -208,39 +208,39 @@ document.getElementById('logout-btn').addEventListener('click', logout);
 
 
 // Load saved quiz state on page load
-window.onload = function () {
-    // Retrieve stored question index and score
-    const savedIndex = localStorage.getItem('currentQuestionIndex');
-    const savedScore = localStorage.getItem('score');
+// window.onload = function () {
+//     // Retrieve stored question index and score
+//     const savedIndex = localStorage.getItem('currentQuestionIndex');
+//     const savedScore = localStorage.getItem('score');
 
-    // Check if there are saved values and use them
-    if (savedIndex !== null) {
-        currentQuestionIndex = parseInt(savedIndex);
-    }
+//     // Check if there are saved values and use them
+//     if (savedIndex !== null) {
+//         currentQuestionIndex = parseInt(savedIndex);
+//     }
 
-    if (savedScore !== null) {
-        score = parseInt(savedScore);
-    }
+//     if (savedScore !== null) {
+//         score = parseInt(savedScore);
+//     }
 
-    // Display the current question
-    displayQuestion();
-};
+//     // Display the current question
+//     displayQuestion();
+// };
 
 // Function to display the current question
-function displayQuestion() {
-    if (currentQuestionIndex < totalQuestions && currentQuestionIndex < questions.length) {
-        const questionContainer = document.getElementById('quiz-container');
-        const question = questions[currentQuestionIndex];
+// function displayQuestion() {
+//     if (currentQuestionIndex < totalQuestions && currentQuestionIndex < questions.length) {
+//         const questionContainer = document.getElementById('quiz-container');
+//         const question = questions[currentQuestionIndex];
 
-        questionContainer.innerHTML = `
-            <h3>Question ${currentQuestionIndex + 1}:</h3>
-            <p>${question.question}</p>
-            ${question.options.map((option, index) => `
-                <button class="option-btn" onclick="selectOption('${option}')">${option}</button>
-            `).join('')}
-        `;
-    } else {
-        // End the quiz if all questions are answered
-        endQuiz();
-    }
-}
+//         questionContainer.innerHTML = `
+//             <h3>Question ${currentQuestionIndex + 1}:</h3>
+//             <p>${question.question}</p>
+//             ${question.options.map((option, index) => `
+//                 <button class="option-btn" onclick="selectOption('${option}')">${option}</button>
+//             `).join('')}
+//         `;
+//     } else {
+//         // End the quiz if all questions are answered
+//         endQuiz();
+//     }
+// }
