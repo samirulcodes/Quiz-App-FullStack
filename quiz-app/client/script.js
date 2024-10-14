@@ -79,8 +79,6 @@ async function startQuiz() {
     startTimer(1200); // 20 minutes in seconds
 }
 
-
-
 const questionNumberDiv = document.getElementById('question-number');
 
 function displayQuestion() {
