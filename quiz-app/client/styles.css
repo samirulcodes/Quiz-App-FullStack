@@ -1,7 +1,7 @@
 /* Global Styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa; /* Soft neutral background */
+    background-color: #f8f9fa;
     margin: 0;
     padding: 0;
     display: flex;
@@ -11,35 +11,36 @@ body {
     min-height: 100vh;
     font-size: 1rem;
     color: #333;
+    line-height: 1.6; /* Improved readability */
 }
 
 /* Main Container */
 #app {
     background: #ffffff;
-    border-radius: 12px; /* Softer corners */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    padding: 30px;
-    max-width: 600px;
+    border-radius: 16px; /* Softer, more modern corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12); /* More prominent shadow */
+    padding: 40px;
+    max-width: 650px;
     width: 100%;
     margin: 20px;
     box-sizing: border-box;
-    transition: all 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 #app:hover {
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Hover effect */
-    transform: translateY(-3px); /* Lift effect on hover */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18); /* Stronger shadow on hover */
+    transform: translateY(-5px); /* More noticeable lift effect */
 }
 
 /* Header Styles */
 h1 {
-    font-size: 2rem;
-    color: #4a4a4a;
+    font-size: 2.2rem; /* Slightly larger for impact */
+    color: #333; /* Darker color for contrast */
     text-align: center;
-    margin-bottom: 25px;
-    letter-spacing: 1px; /* Improve readability */
-    text-transform: uppercase; /* More formal look */
-    border-bottom: 2px solid #28a745; /* Accent underline */
+    margin-bottom: 30px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    border-bottom: 3px solid #28a745; /* More defined accent */
     display: inline-block;
     padding-bottom: 10px;
 }
@@ -53,20 +54,21 @@ h1 {
 /* Input Styles */
 input[type="text"],
 input[type="password"] {
-    padding: 12px;
-    margin: 10px 0;
-    border: 1px solid #ced4da; /* Subtle border */
-    border-radius: 6px; /* Slightly rounded edges */
+    padding: 14px;
+    margin: 12px 0;
+    border: 1px solid #ced4da;
+    border-radius: 8px; /* More rounded for modern feel */
     font-size: 1rem;
     width: 100%;
     box-sizing: border-box;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 input[type="text"]:focus,
 input[type="password"]:focus {
-    border-color: #28a745; /* Green focus outline */
-    outline: none; /* Remove default outline */
+    border-color: #28a745;
+    outline: none;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.25); /* Subtle focus shadow */
 }
 
 /* Button Styles */
@@ -74,20 +76,25 @@ button {
     background-color: #28a745;
     color: white;
     border: none;
-    border-radius: 6px;
-    padding: 12px;
+    border-radius: 8px;
+    padding: 14px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    margin: 10px 0;
-    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    margin: 12px 0;
+    font-size: 1.05rem;
     width: 100%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 button:hover {
     background-color: #218838;
-    transform: translateY(-2px); /* Lift effect */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* More pronounced lift */
+}
+
+button:focus {
+    outline: 2px solid #28a745;
+    outline-offset: 2px; /* Improve accessibility for focus states */
 }
 
 /* Quiz Container Styles */
@@ -98,17 +105,17 @@ button:hover {
 /* Quiz Timer and Question Number */
 #timer, 
 #question-number {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     font-weight: 600;
     margin-bottom: 10px;
-    color: #17a2b8; /* Add an accent color */
+    color: #17a2b8;
 }
 
 /* Question Styles */
 #question {
-    font-size: 1.5rem;
+    font-size: 1.75rem; /* Larger for emphasis */
     font-weight: bold;
-    color: #343a40; /* Darker for better contrast */
+    color: #343a40;
     margin-bottom: 20px;
 }
 
@@ -119,29 +126,33 @@ button:hover {
 }
 
 label {
-    background-color: #f1f3f5; /* Light background */
-    border-radius: 6px;
-    padding: 12px;
+    background-color: #f1f3f5;
+    border-radius: 8px;
+    padding: 14px;
     text-align: left;
-    transition: background-color 0.3s ease, transform 0.2s;
+    transition: background-color 0.3s ease, transform 0.2s ease;
     margin-bottom: 15px;
     font-size: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     cursor: pointer;
 }
 
 label:hover {
-    background-color: #e2e6ea; /* Slightly darker on hover */
-    transform: translateY(-2px); /* Lift effect */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #e2e6ea;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+}
+
+label:focus-within {
+    outline: 2px solid #17a2b8; /* Better accessibility for radio focus */
 }
 
 /* Result Styles */
 #result {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: bold;
     margin-top: 20px;
-    color: #28a745; /* Green for success */
+    color: #28a745;
     text-align: center;
 }
 
@@ -150,20 +161,20 @@ label:hover {
     background-color: #dc3545;
     color: white;
     border: none;
-    border-radius: 6px;
-    padding: 12px;
+    border-radius: 8px;
+    padding: 14px;
     cursor: pointer;
     transition: all 0.3s ease;
     margin-top: 20px;
     display: none;
     width: 100%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 #logout-btn:hover {
     background-color: #c82333;
     transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Quiz Feedback Styles */
@@ -179,49 +190,21 @@ label:hover {
 /* Media Queries for Responsive Design */
 @media (max-width: 600px) {
     #app {
-        padding: 15px;
+        padding: 20px;
     }
 
     button, #logout-btn {
-        padding: 8px;
+        padding: 10px;
     }
 
     input[type="text"],
     input[type="password"] {
-        padding: 8px;
+        padding: 10px;
     }
 
     #timer, 
     #question-number {
-        font-size: 18px;
-    }
-}
-
-
-
-/* Media Queries for Responsive Design */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 1.5rem;
-    }
-
-    #timer, 
-    #question-number {
-        font-size: 1.125rem;
-    }
-
-    #question {
-        font-size: 1.25rem;
-    }
-
-    input[type="text"],
-    input[type="password"] {
-        padding: 8px;
-    }
-
-    button, 
-    #logout-btn {
-        padding: 8px;
+        font-size: 1rem;
     }
 }
 
@@ -247,12 +230,12 @@ label:hover {
 
     button, 
     #logout-btn {
-        padding: 6px;
+        padding: 8px;
         font-size: 0.875rem;
     }
 
     label {
-        padding: 8px;
+        padding: 10px;
         font-size: 0.875rem;
     }
 
