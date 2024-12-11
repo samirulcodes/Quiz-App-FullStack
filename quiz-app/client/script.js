@@ -205,3 +205,47 @@ function logout() {
 // Attach the logout function to the button
 document.getElementById('logout-btn').addEventListener('click', logout);
 
+
+// Explanation
+
+// How does the application handle user authentication?
+// Answer: The application uses JWT (JSON Web Token) for user authentication. When a user logs in, a token is stored in localStorage. This token is sent in the Authorization header for authenticated API requests (e.g., saving quiz results). The token is also used to identify the logged-in user.
+
+// How are quiz questions fetched and displayed?
+// Answer: Quiz questions are fetched from the Open Trivia Database API (https://opentdb.com/api.php?amount=10&type=multiple). The questions and options are displayed dynamically by iterating through the fetched data and creating DOM elements for each question and its options.
+
+// How does the timer work in the quiz application?
+// Answer: The timer is implemented using setInterval. It counts down from 20 minutes (1200 seconds), updating the DOM every second to show the remaining time. When the timer reaches 0, the quiz ends automatically.
+
+// How are quiz results saved to the backend?
+// Answer: After the quiz ends, the score is sent to the server via a POST request to the /api/quiz/save endpoint. The request includes the user's token in the Authorization header for authentication and the score as part of the JSON body.
+
+// What happens when the timer expires or all questions are answered?
+// Answer: When the timer expires or all questions are answered, the endQuiz() function is called. This stops the timer, hides the quiz container, displays the score, and sends the results to the server for storage.
+
+// How does the application handle dynamic question and answer rendering?
+// Answer: Questions and their options are dynamically rendered using JavaScript. The displayQuestion function updates the DOM with the current question, shuffles the options, and adds event listeners to each option to handle user selection.
+
+// How does the application ensure secure API communication?
+// Answer: The application includes the user's token in the Authorization header for protected routes, ensuring that only authenticated users can access sensitive operations like saving quiz results.
+
+// How is the feedback from the server handled after saving quiz results?
+// Answer: The server's response includes feedback, which is displayed in a designated quiz-feedback div. This provides the user with immediate feedback on their quiz performance.
+
+// What role does localStorage play in this application?
+// Answer: localStorage is used to store the user's authentication token, enabling the application to maintain the user's session across page reloads. It is also checked before saving quiz results to ensure the user is logged in.
+
+// What happens during the logout process?
+// Answer: During logout, the token is removed from localStorage, and the user is redirected to the login page. This ensures that no sensitive data remains accessible after logout.
+
+// What considerations are made for user experience after registration?
+// Answer: After registration, the loginAfterRegister function prompts an automatic login attempt using the entered credentials, reducing friction in transitioning from registration to quiz-taking.
+
+// How does the application handle invalid login attempts?
+// Answer: If the server response during login does not include a token, an alert displays the error message, ensuring the user understands why login failed.
+
+// How are correct answers tracked during the quiz?
+// Answer: Each option button includes an event listener that checks if the selected option matches the correct answer. If correct, the score is incremented, and the quiz progresses to the next question.
+
+
+// TELL TO INTERVIEWR ONLY FRONTEND PART IS DONE BY ME
