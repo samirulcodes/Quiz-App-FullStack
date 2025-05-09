@@ -69,7 +69,8 @@ startQuizBtn.addEventListener('click', async () => {
 // Start Quiz function
 async function startQuiz() {
     // Fetch 10 questions from Open Trivia Database API
-    const response = await fetch('https://opentdb.com/api.php?amount=10&type=multiple');
+    // const response = await fetch('https://opentdb.com/api.php?amount=10&type=multiple');
+    const response = await fetch('https://opentdb.com/api.php?amount=10');
     const data = await response.json();
     questions = data.results;
     currentQuestionIndex = 0;
